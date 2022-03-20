@@ -67,6 +67,36 @@ $(document).ready(function() {
           $("#grand-total span").html(grandTotal);
         });
     
+        $(".btn.yes").click(function() {
+          $("#delivery-query").hide();
+
+          $("#location-input").show();
+          $("#location-btn").show();
+
+          $(".additional-info h5").hide();
+          $(".btn.yes").hide();
+          $(".btn.no").hide();
+          $(".order-confirmation").hide();
+          $("#grand-total span").html(grandTotal + 300);
+        });
+    
+        $(".btn.no").click(function() {
+          $("#delivery-query").hide();
+          $(".btn.yes").hide();
+          $(".btn.no").hide();
+          $("#order-confirmation").show();
+        });
+    
+        $('#location-btn').click(function(event) {
+          event.preventDefault();
+          let deliveryLocation = $("#location-input").val();
+          $("#order-confirmation").show();
+          $("#location-input").hide();
+          $("#location-btn").hide();
+          $("#del-confirmation").show();
+
+          $("#del-confirmation span").html(deliveryLocation);
+        });
   });
 });
 
