@@ -18,7 +18,7 @@ To access this project on your local files, you can clone it using these steps
 
 1. Open your terminal
 2. Use this command to clone `$ git clone
-   https://github.com/MutheuLinet/pizzeria.git
+   https://github.com/MutheuLinet/Pizzeria.git
 3. This will clone the repository into your local folder
 4. **Enjoy :)**
 
@@ -33,7 +33,7 @@ To access this project on your local files, you can clone it using these steps
 
 ### Live Site
 
-[Live Link](https://mutheulinet.github.io/pizzeria/)
+[Live Link](https://mutheulinet.github.io/Pizzeria/)
 
 ### License
 
