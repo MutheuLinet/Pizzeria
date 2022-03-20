@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand">Lyn'z Pizzeria</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarColor02"
+            aria-controls="navbarColor02"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarColor02">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="#home"
+                  >Home
+                  <span class="visually-hidden">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#menu">Menu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#order">Order</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact-footer">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12" id="home">
+          <div class="col-md-12" id="home-space">
+            <h1 id="home-h1">
+              <em>Delicious, </em> <br /><em>Heavenly, </em><br />
+              <strong> Slices of Pizza </strong>
+            </h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="h2">
+      <h2>Place Your Orders Here!!</h2>
+    </div>
+    <div class="container-fluid" id="order">
+      <div class="row">
+        <div class="col-md-12">
+          <legend class="mt-4" id="menu">Menu</legend>
+          <table class="table table-hover" id="table">
+            <thead>
+              <tr>
+                <th scope="col">Type</th>
+                <th scope="col">Small Pizza</th>
+                <th scope="col">Medium Pizza</th>
+                <th scope="col">Large Pizza</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Regular Crust</th>
+                <td>200</td>
+                <td>400</td>
+                <td>600</td>
+              </tr>
+              <tr class="table-light">
+                <th scope="row">Double Crust</th>
+                <td>300</td>
+                <td>500</td>
+                <td>700</td>
+              </tr>
+              <tr>
+                <th scope="row">Crispy Crust</th>
+                <td>250</td>
+                <td>450</td>
+                <td>650</td>
+              </tr>
+              <tr class="table-light">
+                <th scope="row">Pepperoni</th>
+                <td>50</td>
+                <td>100</td>
+                <td>150</td>
+              </tr>
+              <tr>
+                <th scope="row">BBQ Chicken</th>
+                <td>50</td>
+                <td>100</td>
+                <td>150</td>
+              </tr>
+              <tr class="table-light">
+                <th scope="row">BBQ Beef</th>
+                <td>50</td>
+                <td>100</td>
+                <td>150</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="row" id="order">
+        <div class="col-md-12">
+          <form>
+            <div class="form-group">
+              <legend class="mt-4">Pizza Size</legend>
+              <select class="form-select size">
+                <option label="Small" value="200">Small</option>
+                <option label="Medium" value="400">Medium</option>
+                <option label="Large" value="600">Large</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <legend class="mt-4">Pizza Crust</legend>
+              <select class="form-select crust">
+                <option label="Regular" value="200">Regular</option>
+                <option label="Double" value="400">Double</option>
+                <option label="Crispy" value="350">Crispy</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <legend class="mt-4">Toppings</legend>
+              <select class="form-select toppings">
+                <option label="Pepperoni" value="150">Pepperoni</option>
+                <option label="BBQ-Chicken" value="200">BBQ-Chicken</option>
+                <option label="BBQ-Beef" value="150">BBQ-Beef</option>
+              </select>
+            </div>
+            <br />
+            <button class="btn btn-info btn-dark order" type="submit">Order</button>
+
+            <button class="btn btn-info btn-dark more-pizza" type="submit">
+              Add Pizza
+            </button>
+            <br />
+            <br />
+            <h6 id="pizza"></h6>
+            <br />
+            <button class="btn btn-info btn-dark check-out" type="submit">
+              Checkout
+            </button>
+            <div class="delivery-info">
+              <h3 id="grand-total">Your grand total is: <span></span></h3>
+              <br>
+              <h5 id="delivery-query">
+                Would you like your pizza delivered at an additional cost of<em>300</em>?
+              </h5>
+              <div class="location text-center">
+                <button class="btn btn-info btn-dark yes" type="submit">Yes</button>
+                <button class="btn btn-info btn-dark no" type="submit">No</button>
+                <input
+                  id="location-input"
+                  type="text"
+                  size="30"
+                  placeholder="Enter your location:"
+                  required
+                />
+                <button 
+                  id="location-btn"
+                  class="btn btn-info btn-dark complete"
+                  type="submit"
+                >
+                  Complete
+                </button>
+                <h5 id="order-confirmation">We have placed your order. Thank you for choosing Lyn'z Pizzeria</h5>
+                <h5 id="del-confirmation">Your delivery will be made to <span></span> location
+                </h5>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div id="contact-footer">
+      <ul>
+        <li>Lyn'z Pizzeria</li>
+        <li>Thika Road Mall</li>
+        <li>00100 Nairobi</li>
+        <li>© 2022 All Rights Reserved</li>
+      </ul>
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
