@@ -1,0 +1,54 @@
+nav {
+  height: 80px;
+}
+#home {
+  background-image: url(../images/pizza2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+}
+#home-space {
+  height: 550px;
+  color: #feb80d;
+}
+#home-h1 {
+  text-align: center;
+  padding-left: 68%;
+  padding-top: 18%;
+  font-size: xx-large;
+}
+#order {
+  background-color: #feb80d;
+}
+#h2 {
+  height: 80px;
+  font-size: larger;
+  color: white;
+  background-color: #202020;
+  padding: 2%;
+}
+#size,
+#crust,
+#toppings,
+#amount {
+  width: 300px;
+}
+form {
+  padding: 5%;
+  padding-top: 1%;
+}
+table {
+  padding: 5%;
+  padding-top: 1%;
+  padding-right: 10%;
+}
+li {
+  list-style: none;
+}
+#contact-footer {
+  background-color: #202020;
+  color: white;
+  text-align: center;
+  height: 120px;
+  padding: 1%;
+}
