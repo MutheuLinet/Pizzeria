@@ -49,6 +49,24 @@ $(document).ready(function() {
 
           $("h6").append(newHeader);
       });
+        $(".btn.check-out").click(function() {
+          $(".btn.order").hide();
+          $(".btn.more-pizza").hide();
+          $(".btn.check-out").hide();
+          $("#grand-total").show();
+
+          $("#delivery-query").show();
+          $(".btn.yes").show();
+          $(".btn.no").show();
+          $("#order-confirmation").hide();      
+          $("#location-input").hide();
+          $("#location-btn").hide();
+
+          grandTotal = grandTotal + total;
+    
+          $("#grand-total span").html(grandTotal);
+        });
+    
   });
 });
 
