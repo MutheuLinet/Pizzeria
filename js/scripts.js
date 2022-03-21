@@ -16,17 +16,12 @@ $(document).ready(function() {
       event.preventDefault();
       let sizeOfPizza = $(".size option:selected").val();
       let chickenToppings = $('input[name="chicken"]:checked').val()
-      console.log(chickenToppings);
       let beefToppings = $('input[name="beef"]:checked').val()
-      console.log(beefToppings);
       let pepToppings = $('input[name="pep"]:checked').val()
-      console.log(pepToppings);
       let totToppings = ~~parseInt(chickenToppings) + ~~parseInt(beefToppings) + ~~parseInt(pepToppings);
-      console.log(totToppings);
 
       let crustOfPizza = $(".crust option:selected").val();
       let total = parseInt(sizeOfPizza) + parseInt(totToppings) + parseInt(crustOfPizza);
-      console.log(total);
       let order = 1;
       let grandTotal = 0;
       //adjustments for size of pizza
@@ -56,14 +51,9 @@ $(document).ready(function() {
           let sizeOfPizza = $(".size option:selected").val();
           // let toppingsOfPizza = $(".toppings option:selected").val();
           let chickenToppings = $('input[name="chicken"]:checked').val()
-          console.log(chickenToppings);
           let beefToppings = $('input[name="beef"]:checked').val()
-          console.log(beefToppings);
           let pepToppings = $('input[name="pep"]:checked').val()
-          console.log(pepToppings);
           let totToppings = ~~parseInt(chickenToppings) + ~~parseInt(beefToppings) + ~~parseInt(pepToppings);
-          console.log(totToppings);
-    
           let crustOfPizza = $(".crust option:selected").val();
           let total = parseInt(sizeOfPizza) + parseInt(totToppings) + parseInt(crustOfPizza);
                 //adjustments for size of pizza
