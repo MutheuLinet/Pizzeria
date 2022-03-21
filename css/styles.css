@@ -45,6 +45,11 @@ table {
 li {
   list-style: none;
 }
+#delivery-query,
+#order-confirmation,
+#del-confirmation {
+  color: rgb(0, 132, 172);
+}
 #contact-footer {
   background-color: #202020;
   color: white;

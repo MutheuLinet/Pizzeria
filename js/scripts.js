@@ -15,10 +15,18 @@ $(document).ready(function() {
   $('.btn.order').click(function(event) {
       event.preventDefault();
       let sizeOfPizza = $(".size option:selected").val();
-      console.log(typeof(sizeOfPizza));
-      let toppingsOfPizza = $(".toppings option:selected").val();
+      let chickenToppings = $('input[name="chicken"]:checked').val()
+      console.log(chickenToppings);
+      let beefToppings = $('input[name="beef"]:checked').val()
+      console.log(beefToppings);
+      let pepToppings = $('input[name="pep"]:checked').val()
+      console.log(pepToppings);
+      let totToppings = ~~parseInt(chickenToppings) + ~~parseInt(beefToppings) + ~~parseInt(pepToppings);
+      console.log(totToppings);
+
       let crustOfPizza = $(".crust option:selected").val();
-      let total = parseInt(sizeOfPizza) + parseInt(toppingsOfPizza) + parseInt(crustOfPizza);
+      let total = parseInt(sizeOfPizza) + parseInt(totToppings) + parseInt(crustOfPizza);
+      console.log(total);
       let order = 1;
       let grandTotal = 0;
       //adjustments for size of pizza
@@ -32,7 +40,8 @@ $(document).ready(function() {
       $(".btn.more-pizza").show();
       $(".btn.check-out").show();
 
-      $("h6").append(order + ")"+ $(".size option:selected").text() + ","+ $(".crust option:selected").text() +","+$(".toppings option:selected").text() +"," +"TOTAL"+"@"+ total);
+      $("h6").append(order + ")"+ $(".size option:selected").text() + ","+ $(".crust option:selected").text() +","+$('input[id="chicken"]:checked').serialize() +" "+$('input[id="beef"]:checked').serialize() +" " + $('input[id="pep"]:checked').serialize()+" " +"TOTAL"+"@"+ total);
+
 
       function Pizza(size, toppings, crust, total, orderNo) {
           this.size = size;
@@ -45,9 +54,18 @@ $(document).ready(function() {
       $('.btn.more-pizza').click(function(event) {
           event.preventDefault();
           let sizeOfPizza = $(".size option:selected").val();
-          let toppingsOfPizza = $(".toppings option:selected").val();
+          // let toppingsOfPizza = $(".toppings option:selected").val();
+          let chickenToppings = $('input[name="chicken"]:checked').val()
+          console.log(chickenToppings);
+          let beefToppings = $('input[name="beef"]:checked').val()
+          console.log(beefToppings);
+          let pepToppings = $('input[name="pep"]:checked').val()
+          console.log(pepToppings);
+          let totToppings = ~~parseInt(chickenToppings) + ~~parseInt(beefToppings) + ~~parseInt(pepToppings);
+          console.log(totToppings);
+    
           let crustOfPizza = $(".crust option:selected").val();
-          let total = parseInt(sizeOfPizza) + parseInt(toppingsOfPizza) + parseInt(crustOfPizza);
+          let total = parseInt(sizeOfPizza) + parseInt(totToppings) + parseInt(crustOfPizza);
                 //adjustments for size of pizza
           if (sizeOfPizza === "400"){
             total += 200; //crust (+100) & toppings(+100) adjustment for medium pizza
@@ -58,9 +76,9 @@ $(document).ready(function() {
           order = order + 1;
           grandTotal = grandTotal + total;
 
-          let newPizza = new Pizza(sizeOfPizza, toppingsOfPizza, crustOfPizza, total, order);
+          let newPizza = new Pizza(sizeOfPizza, totToppings, crustOfPizza, total, order);
 
-          let newHeader = ("  "+ newPizza.orderNo + ")"+ $(".size option:selected").text() +","+ $(".crust option:selected").text() + ","+$(".toppings option:selected").text()+"," +"TOTAL"+"@"+ newPizza.total);
+          let newHeader = ("  "+ newPizza.orderNo + ")"+ $(".size option:selected").text() +","+ $(".crust option:selected").text() + ","+$('input[id="chicken"]:checked').serialize() +" "+$('input[id="beef"]:checked').serialize() +" " + $('input[id="pep"]:checked').serialize()+" " +"TOTAL"+"@"+ newPizza.total);
 
           $("h6").append(newHeader);
       });
@@ -99,6 +117,9 @@ $(document).ready(function() {
           $("#delivery-query").hide();
           $(".btn.yes").hide();
           $(".btn.no").hide();
+          $("#grand-total").hide();
+          $("h6").hide();
+
           $("#order-confirmation").show();
         });
     
@@ -108,8 +129,9 @@ $(document).ready(function() {
           $("#order-confirmation").show();
           $("#location-input").hide();
           $("#location-btn").hide();
+          $("#grand-total").hide();
+          $("h6").hide();
           $("#del-confirmation").show();
-
           $("#del-confirmation span").html(deliveryLocation);
         });
   });
