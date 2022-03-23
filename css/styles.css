@@ -45,6 +45,14 @@ table {
 li {
   list-style: none;
 }
+#grand-total,
+#delivery-query {
+  text-align: center;
+}
+#pizza {
+  text-decoration: underline;
+}
+
 #delivery-query,
 #order-confirmation,
 #del-confirmation {
@@ -64,6 +72,9 @@ li {
   #home {
     height: 150px;
   }
+  #navol {
+    display: none;
+  }
 }
 @media only screen and (min-width: 330px) and (max-width: 670px) {
   #home-h1 {
@@ -75,13 +86,19 @@ li {
   #h2 {
     padding: 5%;
   }
+  #navol {
+    display: none;
+  }
 }
 
-@media only screen and (min-width: 670x) and (max-width: 800px) {
+@media only screen and (min-width: 670px) and (max-width: 800px) {
   #home-h1 {
     display: none;
   }
   #home {
     height: 350px;
+  }
+  #navol {
+    display: none;
   }
 }

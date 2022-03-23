@@ -29,7 +29,7 @@
           </button>
 
           <div class="collapse navbar-collapse" id="navbarColor02">
-            <ul class="navbar-nav me-auto">
+            <ol class="navbar-nav me-auto" id="navol">
               <li class="nav-item">
                 <a class="nav-link active" href="#home"
                   >Home
@@ -45,7 +45,7 @@
               <li class="nav-item">
                 <a class="nav-link" href="#contact-footer">Contact</a>
               </li>
-            </ul>
+            </ol>
           </div>
         </div>
       </nav>
@@ -169,7 +169,7 @@
                   class="form-check-input"
                   type="checkbox"
                   value="150"
-                  name="pep"
+                  name="pepperoni"
                   id="pep"
                 />
                 <label class="form-check-label" for="flexCheckDefault">
@@ -186,19 +186,20 @@
             </button>
             <br />
             <br />
-            <h6 id="pizza"></h6>
+            <ul><li id="pizza">YOUR ORDER DETAILS</li></ul>
             <br />
             <button class="btn btn-info btn-dark check-out" type="submit">
               Checkout
             </button>
             <div class="delivery-info">
-              <h3 id="grand-total">Your grand total is: <span></span></h3>
+              <h3 id="grand-total">Your GRAND TOTAL is: <span></span></h3>
               <br>
               <h5 id="delivery-query">
                 Would you like your pizza delivered at an additional cost of<em>300</em>?
               </h5>
               <div class="location text-center">
-                <button class="btn btn-info btn-info yes" type="submit">Yes</button>
+                <br>
+                <button id="btnYes" class="btn btn-info btn-info yes" type="submit">Yes</button>
                 <button class="btn btn-info btn-info no" type="submit">No</button>
                 <input
                   id="location-input"
@@ -215,20 +216,19 @@
                   Complete
                 </button>
                 <h5 id="order-confirmation">We have placed your order. Thank you for choosing Lyn'z Pizzeria</h5>
-                <h5 id="del-confirmation">Your delivery will be made to <span></span> location
-                </h5>
+                <h5 id="del-confirmation">Your delivery will be made to <span></span> location </h5>
               </div>
             </div>
           </div>
         </div>
     </div>
     <div id="contact-footer">
-      <ul>
+      <ol>
         <li>Lyn'z Pizzeria</li>
         <li>Thika Road Mall</li>
         <li>00100 Nairobi</li>
         <li>© 2022 All Rights Reserved</li>
-      </ul>
+      </ol>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
